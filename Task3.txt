@@ -1,0 +1,24 @@
+//TASK 3:
+
+
+
+//I run df -h on my Amazon EC2 server, this is the output:
+
+[ec2-user@ip-XXXX ~]$ df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/xvda1             25G   25G     0 100% /
+tmpfs                 4.0G     0  4.0G   0% /dev/shm
+
+
+// trying to find all of the big files/folders and this is what i get back:
+
+[ec2-user@ip-XXXX ~]$ sudo du -a / | sort -n -r | head -n 10
+993580  /
+639296  /usr
+237284  /usr/share
+217908  /usr/lib
+206884  /opt
+150236  /opt/app
+150232  /opt/app/current
+150224  /opt/app/current/[deleted].com
+113432  /usr/lib64

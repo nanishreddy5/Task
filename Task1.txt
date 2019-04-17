@@ -1,0 +1,47 @@
+
+
+Task 1:
+
+
+
+echo "# Task1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Maheshballa04/Task1.git
+git push -u origin maste
+npm install
+./script/test
+su — jenkins
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub
+ssh root@NODE.SERVER.IP
+su - <username>
+vim ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/*
+ssh root@JENKINS.SERVER.IP
+su - jenkins
+ssh <username>@NODE.SERVER.IP
+
+#!/bin/sh
+ssh ezderman@NODE.SERVER.IP <<EOF>>
+ cd ~/node-app
+ git pull
+ npm install — production
+ pm2 restart all
+ exit
+
+chmod +x script/deploy
+
+
+Commit and push:
+
+git add .
+git commit -m ‘add deployment script’
+git push origin master
+http://NODE.SERVER.IP:3000
+
+
+
+

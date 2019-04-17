@@ -1,0 +1,15 @@
+
+//TASK 2:
+
+
+java weblogic.Deployer -adminurl http://localhost:7001 -user weblogic
+     -password weblogic -deploy -name myTestDeployment 
+     -source /myDeployments/myApplication.ear
+     -targets myCluster -stage 
+     -plan /myDeployments/myAppPlan.xml
+
+java weblogic.Deployer -adminurl http://localhost:7001 -user weblogic
+     -password weblogic -deploy -name myTestDeployment 
+     -source /myDeployments/installedApps/myApplication/app/myApplication.ear
+     -targets myCluster -stage
+     -plan /myDeployments/installedApps/myApplication/plan/plan.xml
